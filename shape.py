@@ -25,7 +25,7 @@ class Shape:
     """Returnes the perimeter of the shape"""
 
 
-    def __eq__(self, other) -> Bool:
+    def __eq__(self, other) -> bool:
         if not isinstance(other, Shape): 
             return NotImplemented
         
@@ -33,13 +33,35 @@ class Shape:
     """Check that the area is the same in self and other 
     ex circle1(self) == circle2(other)"""
 
-    def __lt__(self, other) -> Bool: 
+    def __lt__(self, other) -> bool: 
+        if not isinstance(other,Shape): 
+            return NotImplemented
+        
+        return self.area < other.area
+    """Check that the area is less  in self and other 
+    ex circle1(self) < circle2(other)"""
 
-    def __gt__(self, other) -> Bool: 
+    def __gt__(self, other) -> bool: 
+        if not isinstance(other, Shape): 
+            return NotImplemented 
+        
+        return self.area > other.area
+    """Check that the area is more in self and other 
+    ex circle1(self) > circle2(other)"""
 
-    def __le__(self, other) -> Bool:
-    
-    def __ge__(self, other) -> Bool:
+    def __le__(self, other) -> bool:
+        if not isinstance(other, Shape): 
+            return NotImplemented
+        
+        return self.area <= other.area
+    """Check that the area is less or equal in self and other 
+    ex circle1(self) <= circle2(other)"""
 
-
+    def __ge__(self, other) -> bool:
+        if not isinstance(other, Shape): 
+            return NotImplemented
+        
+        return self.area >= other.area
+"""Check that the area is more or equal in self and other 
+    ex circle1(self) >= circle2(other)"""
 
