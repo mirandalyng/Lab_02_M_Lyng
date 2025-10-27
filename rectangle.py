@@ -30,4 +30,10 @@ class Rectangle(Shape):
     def is_unit_square(self):
         return self.width == self.height
     
-        
+    
+    def __repr__(self) -> str: 
+        return f"{self.__class__.__name__}(width = {self.width}, height = {self.height}, x = {self.x}, y = {self.y})"
+
+
+    def __str__(self) -> str: 
+        return f"{self.__class__.__name__} with width = {self.width}, height= {self.height}= {self.x} and y = {self.y}, area = {self.area:.2f} and perimeter = {self.perimeter:.2f}"

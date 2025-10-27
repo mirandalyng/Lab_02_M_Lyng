@@ -30,12 +30,11 @@ class Circle(Shape):
     
 
     def is_unit_circle(self): 
-
         return self.x**2 + self.y**2 <= 1
     
 
     def __repr__(self) -> str: 
-        return f"{self.__class__name}({self.radius}, x = {self.x}, y = {self.y})"
+        return f"{self.__class__.__name__}({self.radius}, x = {self.x}, y = {self.y})"
 
 
     def __str__(self) -> str: 
