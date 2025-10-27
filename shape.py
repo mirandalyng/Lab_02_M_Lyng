@@ -10,6 +10,7 @@ class Shape:
 
 
     """Abstract Propertys are defined"""
+
     @property
     @abstractmethod
     def area(self) -> None: 
@@ -24,10 +25,13 @@ class Shape:
     """Returnes the perimeter of the shape"""
 
 
-    
-
-
-    def __eq__(self, other) -> Bool: 
+    def __eq__(self, other) -> Bool:
+        if not isinstance(other, Shape): 
+            return NotImplemented
+        
+        return self.area == other.area 
+    """Check that the area is the same in self and other 
+    ex circle1(self) == circle2(other)"""
 
     def __lt__(self, other) -> Bool: 
 
