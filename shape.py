@@ -72,4 +72,7 @@ class Shape(ABC):
 
         self.x += dx
         self.y += dy
+
+    def __repr__(self) -> str:
+        return(f"{self.__class__.__name__}(x = {self.x}, y = {self.y})")
         
