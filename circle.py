@@ -32,3 +32,11 @@ class Circle(Shape):
     def is_unit_circle(self): 
 
         return self.x**2 + self.y**2 <= 1
+    
+
+    def __repr__(self) -> str: 
+        return f"{self.__class__name}({self.radius}, x = {self.x}, y = {self.y})"
+
+
+    def __str__(self) -> str: 
+        return f"{self.__class__.__name__} with radius: {self.radius}, and positions x = {self.x} and y = {self.y}, area = {self.area:.2f} and perimeter = {self.perimeter:.2f}"
