@@ -1,4 +1,4 @@
-import math
+
 from abc import ABC, abstractmethod
 
 
@@ -62,6 +62,6 @@ class Shape:
             return NotImplemented
         
         return self.area >= other.area
-"""Check that the area is more or equal in self and other 
+    """Check that the area is more or equal in self and other 
     ex circle1(self) >= circle2(other)"""
 
