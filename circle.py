@@ -5,8 +5,8 @@ class Circle(Shape):
     
     def __init__(self, radius, x=0 , y =0 ): 
         super().__init__(x,y)
-        if radius < 0: 
-            raise ValueError(f"Radius must be a positive number, not {type(radius)}")
+        if radius <= 0: 
+            raise ValueError(f"Radius must be a positive number, not {radius}")
         
         self.radius = radius 
 
@@ -23,5 +23,5 @@ class Circle(Shape):
     
 
     def is_unit_circle(self, x, y): 
-        
+
         return x**2 + y**2 <= 1
