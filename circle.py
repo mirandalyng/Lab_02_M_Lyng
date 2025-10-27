@@ -5,8 +5,15 @@ class Circle(Shape):
     
     def __init__(self, radius, x=0 , y =0 ): 
         super().__init__(x,y)
+
+        if not all(isinstance(value, (int, float)) for value in (x,y,radius)): 
+            raise TypeError(f"Type must be int or float")
+        
         if radius < 0: 
             raise ValueError(f"Radius must be a positive number, not {radius}")
+        
+        if x < 0 or y < 0:
+            raise ValueError(f"Values must be positive integers")
         
         self.radius = radius 
 
