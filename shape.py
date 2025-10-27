@@ -65,7 +65,11 @@ class Shape(ABC):
     """Check that the area is more or equal in self and other 
     ex circle1(self) >= circle2(other)"""
 
+
     def translate(self,dx,dy): 
+        if not all(isinstance(value, (int, float)) for value in (dx,dy)): 
+            raise TypeError(f"Type must be int or float")
+
         self.x += dx
         self.y += dy
         
