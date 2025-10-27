@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 
 
-class Shape: 
+class Shape(ABC): 
     def __init__(self, x: float, y: float):
         self.x = x 
         self.y = y 
@@ -65,7 +65,7 @@ class Shape:
     """Check that the area is more or equal in self and other 
     ex circle1(self) >= circle2(other)"""
 
-    def translation(self,dx,dy): 
+    def translate(self,dx,dy): 
         self.x += dx
-        self.dy += dy
+        self.y += dy
         
