@@ -65,3 +65,7 @@ class Shape:
     """Check that the area is more or equal in self and other 
     ex circle1(self) >= circle2(other)"""
 
+    def translation(self,dx,dy): 
+        self.x += dx
+        self.dy += dy
+        
