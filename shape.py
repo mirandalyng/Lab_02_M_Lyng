@@ -76,3 +76,5 @@ class Shape(ABC):
     def __repr__(self) -> str:
         return(f"{self.__class__.__name__}(x = {self.x}, y = {self.y})")
         
+    def __str__(self) -> str: 
+        return f"{self.__class__.__name__} with positions (x: {self.x} and y: {self.y})"
