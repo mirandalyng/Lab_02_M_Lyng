@@ -1,80 +1,129 @@
-
-
 from abc import ABC, abstractmethod
 
 class Shape(ABC): 
+    """
+    Superclass/parentclass representing a Shape. 
+
+    Attrubutes: 
+    - x(float): The shapes posistion on the x-coordinate
+    - y(float): The shapes posistion on the y-coordinate
+
+    Methods:
+    - __eq__(): Checks if the shape type, area and perimeter is equal in two different instantiations. 
+            Returns:  True/False 
+
+    - __lt__(): Checks if one area is less than the other area in two instantiations.
+            Return: True/False 
+    
+    - __gt__(): Checks if one area is greater than the other area in two instantiations.
+            Return: True/False 
+
+    -__le__():Checks if one area is less than OR equal to the other area in two instantiations. 
+            Return: True/False 
+
+    -__ge__():Checks if one area is greater than OR equal the other area in two instantiations. 
+            Return: True/False 
+
+    -translate(): Moves the coordinates by adding the dx coordinate value and dy coordinate value to the exsisting x-coordinate and y-coordinate.  
+            Return: The dx-coordinate and the yx-coordinate 
+    
+    Example usage: 
+    
+    >>> rectangle =(1,2)
+    >>> rectangle2 =(1,2)
+    >>> rectangle1 == rectangle2
+    True 
+
+    >>> circle1 = Circle(x=0, y=0, radius=1)
+    >>> circle1.translate(5, 3) 
+    Circle(1, x = 5, y = 3)
+    
+    """
+
     def __init__(self, x: float, y: float):
         self.x = x 
         self.y = y 
 
-
-    """Abstract Propertys are defined"""
+    """Initializes a new instance of the Shape class"""
 
     @property
     @abstractmethod
-    def area(self) -> None: 
+    def area(self) -> float: 
+        """
+        Defines property area: abstract
+        """
         pass 
-    """Returnes the area of the shape"""
-    
-
+  
     @property 
     @abstractmethod 
-    def perimeter(self) -> None:  
+    def perimeter(self) -> float:  
+        """
+        Defines property perimeter: abstract
+        """
         pass 
-    """Returnes the perimeter of the shape"""
 
     @property
     @abstractmethod
-    def volume(self) -> None: 
+    def volume(self) -> float: 
+        """
+        Defines property volume: abstract
+        """
         pass
-    """Returns the volume of the shape"""
 
     def __eq__(self, other) -> bool:
         if not isinstance(other, Shape): 
             return NotImplemented
+        """
+        Method containing equal-check on type, area and perimeter 
+        """
         
-        return self.area == other.area 
+        return (
+            type(self) == type(other) and 
+            self.area == other.area and 
+            self.perimeter == other.perimeter
+            )
     
-    """Check that the area is the same in self and other 
-    ex circle1(self) == circle2(other)"""
 
     def __lt__(self, other) -> bool: 
         if not isinstance(other,Shape): 
             return NotImplemented
-        
+        """
+        Method containing a less than check using the area on the shape
+        """
         return self.area < other.area
-    """Check that the area is less  in self and other 
-    ex circle1(self) < circle2(other)"""
-
+   
     def __gt__(self, other) -> bool: 
         if not isinstance(other, Shape): 
             return NotImplemented 
-        
+        """
+        Method containing a greater than check using the area on the shape
+        """
         return self.area > other.area
-    """Check that the area is more in self and other 
-    ex circle1(self) > circle2(other)"""
+
 
     def __le__(self, other) -> bool:
         if not isinstance(other, Shape): 
             return NotImplemented
-        
+        """
+        Method containing a less than OR equal check using the area on the shape
+        """
         return self.area <= other.area
-    """Check that the area is less or equal in self and other 
-    ex circle1(self) <= circle2(other)"""
+ 
 
     def __ge__(self, other) -> bool:
         if not isinstance(other, Shape): 
             return NotImplemented
-        
+        """
+        Method containing a greater than OR equal check using the area on the shape
+        """
         return self.area >= other.area
-    """Check that the area is more or equal in self and other 
-    ex circle1(self) >= circle2(other)"""
-
-
+    
     def translate(self,dx,dy): 
         if not all(isinstance(value, (int, float)) for value in (dx,dy)): 
             raise TypeError(f"Type must be int or float")
-
+        """
+        Adding values to the x-coordinate and y-coordinate
+        """
         self.x += dx
         self.y += dy
 
