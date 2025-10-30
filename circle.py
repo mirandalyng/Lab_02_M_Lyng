@@ -1,6 +1,4 @@
 
-
-"""Importing math module and shape.py file Class"""
 import math 
 from shape import Shape 
 
@@ -60,7 +58,7 @@ class Circle(Shape):
     
 
     def is_unit_circle(self): 
-        
+
         return self.x**2 + self.y**2 <= 1
     
 

@@ -27,7 +27,7 @@ class Shape(ABC):
     -translate(): Moves the coordinates by adding the dx coordinate value and dy coordinate value to the exsisting x-coordinate and y-coordinate.  
             Return: The dx-coordinate and the yx-coordinate 
     
-    Example usage: 
+    Example usage in subclasses for Shape:  
     
     >>> rectangle =(1,2)
     >>> rectangle2 =(1,2)
@@ -37,14 +37,15 @@ class Shape(ABC):
     >>> circle1 = Circle(x=0, y=0, radius=1)
     >>> circle1.translate(5, 3) 
     Circle(1, x = 5, y = 3)
-    
+
     """
 
     def __init__(self, x: float, y: float):
         self.x = x 
         self.y = y 
-
-    """Initializes a new instance of the Shape class"""
+        """
+        Initializes a new instance of the Shape class
+        """
 
     @property
     @abstractmethod
@@ -76,7 +77,6 @@ class Shape(ABC):
         """
         Method containing equal-check on type, area and perimeter 
         """
-        
         return (
             type(self) == type(other) and 
             self.area == other.area and 
@@ -100,7 +100,6 @@ class Shape(ABC):
         """
         return self.area > other.area
 
-
     def __le__(self, other) -> bool:
         if not isinstance(other, Shape): 
             return NotImplemented
@@ -109,7 +108,6 @@ class Shape(ABC):
         """
         return self.area <= other.area
  
-
     def __ge__(self, other) -> bool:
         if not isinstance(other, Shape): 
             return NotImplemented
