@@ -25,7 +25,6 @@ class Rectangle(Shape):
     @property
     def perimeter(self): 
         return 2*(self.width + self.height)
-    
 
     def is_unit_square(self):
         return self.width == self.height
