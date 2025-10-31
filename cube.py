@@ -1,13 +1,10 @@
 import math 
 from shape import Shape
 
-
 class Cube(Shape):
 
     def __init__(self, side: float, x = 0, y = 0):
         super().__init__(x, y)
-
-
 
         if not all(isinstance(value, (int, float)) for value in (x,y,side)): 
             raise TypeError(f"Type must be int or float")
