@@ -47,6 +47,9 @@ class Rectangle(Shape):
         if width <= 0 or height <= 0:  
             raise ValueError(f"Width and height need to be positive values")
         
+        if x < 0 or y < 0: 
+            raise ValueError(f"x and y must be greater than 0")
+        
         self.width = width 
         self.height = height
     
