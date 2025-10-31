@@ -4,7 +4,7 @@ class Shape(ABC):
     """
     Superclass/parentclass representing a Shape. 
 
-    Attrubutes: 
+    Attributes: 
     - x(float): The shapes posistion on the x-coordinate
     - y(float): The shapes posistion on the y-coordinate
 
@@ -63,14 +63,6 @@ class Shape(ABC):
         """
         pass 
 
-    @property
-    @abstractmethod
-    def volume(self) -> float: 
-        """
-        Defines property volume: abstract
-        """
-        pass
-
     def __eq__(self, other) -> bool:
         if not isinstance(other, Shape): 
             return NotImplemented
@@ -126,7 +118,13 @@ class Shape(ABC):
         self.y += dy
 
     def __repr__(self) -> str:
+        """
+        A detailed representation to recreate the object in a string 
+        """
         return(f"{self.__class__.__name__}(x = {self.x}, y = {self.y})")
         
     def __str__(self) -> str: 
+        """
+        A userfriendly string output of the object in a string
+        """
         return f"{self.__class__.__name__} with positions (x: {self.x} and y: {self.y})"
