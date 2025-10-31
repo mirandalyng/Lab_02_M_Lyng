@@ -13,6 +13,7 @@ The purpose of this lab is to practice object-oriented programming (OOP) in Pyth
 - https://medium.com/@techwithjulles/python-calculates-and-displays-the-area-and-perimeter-of-a-rectangle-fc9577f6a9bc
 - https://stackoverflow.com/questions/12262017/python-checking-if-coordinates-are-within-circle
 - https://www.calculatorsoup.com/calculators/geometry-solids/cube.php
+- https://github.com/AIgineerAB/python_course/blob/main/13_oop_fundamentals/c)_oop_documentation.ipynb 
 - Some chat gpt to explain and understand certain math analysis and structure and for formels of the matematics (ex a sphere)
     - for exampla I asked it for this picture and explenation and for error handling 
 and debugging 
@@ -24,6 +25,9 @@ and debugging
 
 
 
-### UML 
+# UML 
+An uml created for task 1 and 2 containng the relationship and inheritance between the classes. 
+
+![Uml task 1 and 2](<images/UML_lab2.png>)
 
 
