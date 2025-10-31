@@ -12,19 +12,20 @@ class Circle(Shape):
     - y(float): The y-coordinate of the circle's center.
 
     Methods: 
-    - is_unit_circle(): Checks if the radie is 1 in the circle 
-            Return: The 
+    - is_unit_circle(): Calculates if the radie is 1 in a circle and has the origin (0,0) 
+            Return: True / False
 
     Propertys: 
     - area{}: inherits an abstract property/method and calculates the area of the circle
     - perimeter{}: inherits an abstract property/method and calculates the perimeter of the circle
 
-
     """ 
 
-    def __init__(self, radius, x=0 , y =0 ): 
+    def __init__(self, radius: float, x=0 , y =0 ): 
         """
         Initialize a Circle instance
+
+        Inheritates the x,y from Shape class. 
         
         Arguments:
         radius(float): not optional 
@@ -63,17 +64,20 @@ class Circle(Shape):
         """
         return 2 * math.pi * self.radius
     
-
-    def is_unit_circle(self): 
+    def is_unit_circle(self) -> bool: 
         """
-        
+        Calculates if the circle is unit or not
         """
         return self.x**2 + self.y**2 <= 1
     
-
     def __repr__(self) -> str: 
+        """
+        A detailed representation to recreate the object in a string 
+        """
         return f"{self.__class__.__name__}({self.radius}, x = {self.x}, y = {self.y})"
 
-
-    def __str__(self) -> str: 
+    def __str__(self) -> str:
+        """
+        A userfriendly string output of the object in a string
+        """ 
         return f"{self.__class__.__name__} with radius: {self.radius}, and positions x = {self.x} and y = {self.y}, area = {self.area:.2f} and perimeter = {self.perimeter:.2f}"
