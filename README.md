@@ -14,6 +14,8 @@ The purpose of this lab is to practice object-oriented programming (OOP) in Pyth
 - https://stackoverflow.com/questions/12262017/python-checking-if-coordinates-are-within-circle
 - https://www.calculatorsoup.com/calculators/geometry-solids/cube.php
 - https://github.com/AIgineerAB/python_course/blob/main/13_oop_fundamentals/c)_oop_documentation.ipynb 
+- https://www.geeksforgeeks.org/python/matplotlib-patches-rectangle-in-python/ 
+
 - Some chat gpt to explain and understand certain math analysis and structure and for formels of the matematics (ex a sphere)
     - for exampla I asked it for this picture and explenation and for error handling 
 and debugging 
