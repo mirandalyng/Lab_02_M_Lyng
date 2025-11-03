@@ -15,10 +15,13 @@ class Circle(Shape):
     - is_unit_circle(): Calculates if the radie is 1 in a circle and has the origin (0,0) 
             Return: True / False
 
-    Propertys: 
-    - area{}: inherits an abstract property/method and calculates the area of the circle
-    - perimeter{}: inherits an abstract property/method and calculates the perimeter of the circle
+    Example usage for Circle: 
+    >>> circle1 = Circle(x=0, y=0, radius=1)
+    >>> circle1
+    Circle(radius = 1, x = 0, y = 0)
 
+    >>> circle1.is_unit_circle() 
+    True 
     """ 
 
     def __init__(self, radius: float, x=0 , y =0 ): 
@@ -74,7 +77,7 @@ class Circle(Shape):
         """
         A detailed representation to recreate the object in a string 
         """
-        return f"{self.__class__.__name__}({self.radius}, x = {self.x}, y = {self.y})"
+        return f"{self.__class__.__name__}(radius = {self.radius}, x = {self.x}, y = {self.y})"
 
     def __str__(self) -> str:
         """

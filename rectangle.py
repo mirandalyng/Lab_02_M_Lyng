@@ -15,10 +15,13 @@ class Rectangle(Shape):
         - is_unit_square(): Calculates if the rectangle is a square or not. 
                 Return: True / False
 
-        Propertys: 
-        - area{}: inherits an abstract property/method and calculates the area of the rectangle
-        - perimeter{}: inherits an abstract property/method and calculates the perimeter of the rectangle
+        Example usage for Rectangle: 
+        >>> rectangle = Rectangle(x=0, y=0, width=1, height=1)
+        >>> rectangle 
+        Rectangle(width = 1, height = 1, x = 0, y = 0)
 
+        >>> rectangle.is_unit_square()
+        True 
 
         """ 
 

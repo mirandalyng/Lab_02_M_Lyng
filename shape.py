@@ -29,12 +29,9 @@ class Shape(ABC):
     
     Example usage in subclasses for Shape:  
     
-    >>> rectangle =(1,2)
-    >>> rectangle2 =(1,2)
     >>> rectangle1 == rectangle2
     True 
 
-    >>> circle1 = Circle(x=0, y=0, radius=1)
     >>> circle1.translate(5, 3) 
     Circle(1, x = 5, y = 3)
 
@@ -75,7 +72,6 @@ class Shape(ABC):
             self.perimeter == other.perimeter
             )
     
-
     def __lt__(self, other) -> bool: 
         if not isinstance(other,Shape): 
             return NotImplemented
