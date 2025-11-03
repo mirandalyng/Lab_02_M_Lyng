@@ -50,12 +50,12 @@ class Sphere(Shape):
         """
         Calculates the surface area of the sphere 
         """
-        return 4 * math.pi(self.radius **2)
+        return 4 * math.pi * (self.radius ** 2)
     
     @property
     def perimeter(self): 
         """
-        Calculates the perimeter of the sphere 
+        Calculates the circumference of a great circle of the sphere.
         """
         return 2 * math.pi * self.radius 
     
@@ -64,7 +64,7 @@ class Sphere(Shape):
         """
         Calculates the volume of the sphere 
         """
-        return (4/3)* math.pi * (self.radius ** 3)
+        return (4/3) * math.pi * (self.radius ** 3)
 
     def __repr__(self) -> str: 
         """
