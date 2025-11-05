@@ -25,11 +25,9 @@ and debugging
 
 - ![](<images/operator_overload.png>)
 
-
-
-# UML 
+# UML
 An uml created for task 1 and 2 containng the relationship and inheritance between the classes. 
 
-![Uml task 1 and 2](<images/UML_lab2.png>)
+![Uml task 1 and 2](<images/Lab02-UML.png>)
 
 
